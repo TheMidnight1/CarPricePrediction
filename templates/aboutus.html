@@ -1,0 +1,537 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description" />
+    <meta name="author" content="Your name" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>About Us</title>
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      id="navbarExample"
+      class="navbar navbar-expand-lg fixed-top navbar-dark"
+      aria-label="Main navigation"
+    >
+      <div class="container">
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"
+          ><img src="{% static 'images/logo.png' %}" alt="alternative"
+        /></a>
+
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text" href="index.html">Zigo</a> -->
+
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          id="navbarSideCollapse"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="navbar-collapse offcanvas-collapse"
+          id="navbarsExampleDefault"
+        >
+          <ul class="navbar-nav ms-auto navbar-nav-scroll">
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'useraccount:homepage'%}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'useraccount:services'%}">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'useraccount:aboutus'%}">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown01"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Vehicle Reviews</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <li>
+                  <a class="dropdown-item" href="article.html"
+                    >Best Vehicle</a
+                  >
+                </li>
+                <li><div class="dropdown-divider"></div></li>
+                <li>
+                  <a class="dropdown-item" href="terms.html"
+                    >Electric Vehicle</a
+                  >
+                </li>
+                <li><div class="dropdown-divider"></div></li>
+                <li>
+                  <a class="dropdown-item" href="privacy.html"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'useraccount:FAQ'%}">FAQ</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+          <span class="nav-item social-icons">
+            <span class="fa-stack">
+              <a href="#your-link">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x"></i>
+              </a>
+            </span>
+            <span class="fa-stack">
+              <a href="#your-link">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+              </a>
+            </span>
+          </span>
+        </div>
+        <!-- end of navbar-collapse -->
+      </div>
+      <!-- end of container -->
+    </nav>
+    <!-- end of navbar -->
+    <!-- end of navigation -->
+
+    <!-- Header -->
+    <header class="ex-header bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+            <h1>About Us</h1>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </header>
+    <!-- end of ex-header -->
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <img
+              class="img-fluid mt-5 mb-3"
+              src="{% static 'images/aboutusimg.jfif' %}"
+              alt="alternative"
+            />
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+            <p>
+              Vehicle Valuation System is a leading provider of vehicle
+              valuation services, offers comprehensive and accurate assessments
+              of vehicle values for individuals, businesses, and organizations.
+              With our expertise and commitment to excellence, we aim to provide
+              reliable and trustworthy valuation solutions tailored to meet the
+              specific needs of our clients.
+            </p>
+
+            <p class="mb-5">
+              Our team of experienced professionals and data analysts utilize
+              advanced methodologies and cutting-edge technology to deliver
+              accurate valuations based on extensive market research and
+              analysis. We understand the importance of providing precise
+              valuation figures to support our clients' decision-making
+              processes, whether they are buying, selling, insuring, or managing
+              vehicle assets.
+            </p>
+
+            <h2 class="mb-3">Advantages of using this valuation system</h2>
+            <p>
+              At this system, we are committed to delivering high-quality
+              vehicle valuation services that add value to our clients'
+              decision-making processes. Whether you're a buyer, seller,
+              financial institution, or insurance provider, you can trust us to
+              provide accurate and reliable valuations that meet your specific
+              requirements.
+            </p>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+    <!-- Cards -->
+    <div class="ex-cards-1 pt-3 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Card -->
+            <div class="card">
+              <ul class="list-unstyled">
+                <li class="d-flex">
+                  <span class="fa-stack">
+                    <span class="fas fa-circle fa-stack-2x"></span>
+                    <span class="fa-stack-1x">1</span>
+                  </span>
+                  <div class="flex-grow-1">
+                    <h5>Accurate and Reliable Valuations</h5>
+                    <p>
+                      Our valuation process combines data analysis and industry
+                      expertise to provide accurate and reliable vehicle
+                      valuations, ensuring informed decision-making based on
+                      true market values.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- end of card -->
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="card">
+              <ul class="list-unstyled">
+                <li class="d-flex">
+                  <span class="fa-stack">
+                    <span class="fas fa-circle fa-stack-2x"></span>
+                    <span class="fa-stack-1x">2</span>
+                  </span>
+                  <div class="flex-grow-1">
+                    <h5>Time and Cost Savings</h5>
+                    <p>
+                      Save time and effort by utilizing our valuation service.
+                      Our efficient processes and comprehensive data access
+                      allow us to deliver quick and accurate valuations, sparing
+                      you from the complexities and time-consuming research
+                      involved in determining a vehicle's value.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- end of card -->
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="card">
+              <ul class="list-unstyled">
+                <li class="d-flex">
+                  <span class="fa-stack">
+                    <span class="fas fa-circle fa-stack-2x"></span>
+                    <span class="fa-stack-1x">3</span>
+                  </span>
+                  <div class="flex-grow-1">
+                    <h5>Customer Service and Support</h5>
+                    <p>
+                      Our priority is delivering excellent customer service and
+                      support. Our dedicated team is ready to assist you
+                      throughout the valuation process, addressing your
+                      questions, concerns, and providing guidance. We strive to
+                      ensure your satisfaction and deliver a positive experience
+                      when working with our service.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- end of card -->
+            <!-- end of card -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of ex-cards-1 -->
+    <!-- end of cards -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-3 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+            <h2 class="mb-4">Find the right types of electric car for you</h2>
+            <img
+              class="img-fluid mb-5"
+              src="{% static 'images/ev.jpg' %}"
+              alt="alternative"
+            />
+            <p>
+              Our team is dedicated to continuously improving our valuation
+              algorithms and expanding our database to ensure accurate and
+              up-to-date information. We prioritize the integrity of our
+              valuation reports and aim to maintain the highest standards of
+              professionalism and accuracy.
+            </p>
+            <p class="mb-5">
+              As a team of experienced professionals in the automotive industry,
+              we utilize advanced data analysis techniques and market research
+              to determine the fair market value of vehicles. Our valuation
+              process takes into account various factors such as the make,
+              model, year, mileage, condition, and regional market trends.
+            </p>
+            <div class="text-box mb-5">
+              <h3>Guides to buying an electric car</h3>
+
+              <ul class="list-unstyled li-space-lg">
+                <li class="d-flex">
+                  <i class="fas fa-square"></i>
+                  <div class="flex-grow-1">
+                    <strong>Battery Life</strong
+                    > For most of this article, we'll be talking about battery-electric vehicles (BEVs), commonly called electric vehicles (EVs) or electric cars. We've compiled a list of all the EV terms you might come across to help you get your head around electric car jargon here.
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-square"></i>
+                  <div class="flex-grow-1">
+                    <strong>Electric Explained</strong>
+                    When an electric car is plugged into a charging point, the car's battery pack draws and then stores the energy needed to power the car. The range of an EV depends on the car's battery-the higher the capacity of the battery (measured in kWh) the greater the range.
+                  </div>
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-square"></i>
+                  <div class="flex-grow-1">
+                    <strong>Charging at home</strong>
+                    You should get your home charging points installed by
+                    qualified specialists. If you own your home, installing a
+                    charging point shouldn't be an issue - it's your home, you
+                    can do what you like. Although if your property is listed or
+                    you live in a conservation area, it's worth checking with
+                    your local planning department first.
+                  </div>
+                </li>
+                <li class="d-flex">
+                  <i class="fas fa-square"></i>
+                  <div class="flex-grow-1">
+                    <strong>Range</strong>
+                    One of the most common questions asked about electric cars
+                    is, 'how far can they go?'. Well, it depends. Different
+                    vehicles have different sizes of batteries, each of which
+                    will give it a different amount of power to call on. Battery
+                    technology is moving on at a great pace, but currently, some
+                    of the newest electric cars boast an official range of
+                    around 300 miles.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- end of text-box -->
+            <!-- end of text-box -->
+            <p class="mb-4">
+              Whether you are a private individual, a dealership, or an
+              insurance company, our vehicle valuation services are designed to
+              cater to your specific needs. We are committed to delivering
+              excellence in vehicle valuation and assisting our customers in
+              making well-informed choices in the automotive industry.
+            </p>
+            <ul class="list-unstyled li-space-lg mb-5">
+              <li class="d-flex">
+                <i class="fas fa-square"></i>
+                <div class="flex-grow-1">
+                  <strong>User-Friendly Platform</strong> to make the vehicle
+                  valuation process convenient and accessible.
+                </div>
+              </li>
+              <li class="d-flex">
+                <i class="fas fa-square"></i>
+                <div class="flex-grow-1">
+                  <strong>Industry Partnerships</strong> with automotive
+                  industry leaders, dealerships, and other relevant entities.
+                </div>
+              </li>
+              <li class="d-flex">
+                <i class="fas fa-square"></i>
+                <div class="flex-grow-1">
+                  <strong>Future Developments</strong>and expanded services
+                  aimed at further improving the accuracy and usability of our
+                  valuations.
+                </div>
+              </li>
+              <li class="d-flex">
+                <i class="fas fa-square"></i>
+                <div class="flex-grow-1">
+                  <strong>Accurate Valuation Methodology</strong>to determine
+                  the fair market value of vehicles.
+                </div>
+              </li>
+            </ul>
+
+            <a class="btn-solid-reg mb-5" href="{%url 'useraccount:homepage'%}">Home</a>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+    <!-- Footer -->
+    <div class="footer bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer-col first">
+              <h6>About Website</h6>
+              <p class="p-small">
+                With our extensive expertise in the automotive industry and access to comprehensive market 
+                                data, we aim to provide accurate and up-to-date valuations for a wide range of vehicles. Whether you're buying,
+                                 selling, or simply curious about the value of your vehicle, our system is here to assist you.
+              </p>
+            </div>
+            <!-- end of footer-col -->
+            <div class="footer-col second">
+              <h6>Links</h6>
+              <ul class="list-unstyled li-space-lg p-small">
+                <li>
+                  Important: <a href="terms.html">Terms & Conditions</a>,
+                  <a href="privacy.html">Privacy Policy</a>
+                </li>
+                <li>
+                  Useful: <a href="#">Colorpicker</a>,
+                  <a href="#">Icon Library</a>, <a href="#">Illustrations</a>
+                </li>
+                <li>
+                  Menu: <a href="index.html">Home</a>,
+                  <a href="#services">Services</a>,
+                  <a href="#solutions">Solutions</a>,
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <!-- end of footer-col -->
+            <div class="footer-col third">
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+              </span>
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x"></i>
+                </a>
+              </span>
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                </a>
+              </span>
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-instagram fa-stack-1x"></i>
+                </a>
+              </span>
+              <p class="p-small">
+                Feel free to reach out to us via email or phone with any inquiries, feedback, or support you may need.
+                 Our team is ready to assist you and provide any necessary information related to our Vehicle Valuation 
+                 Project.
+                
+              </p>
+            </div>
+            <!-- end of footer-col -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of footer -->
+    <!-- end of footer -->
+
+    <!-- Copyright -->
+    <div class="copyright bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- enf of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of copyright -->
+    <!-- end of copyright -->
+
+    <!-- Back To Top Button -->
+    <button onclick="topFunction()" id="myBtn">
+      <img src="{% static 'images/up-arrow.png' %}" alt="alternative" />
+    </button>
+    <!-- end of back to top button -->
+
+    <!-- Scripts -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Bootstrap framework -->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <!-- Custom scripts -->
+  </body>
+</html>

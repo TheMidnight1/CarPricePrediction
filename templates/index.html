@@ -1,0 +1,502 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Your description">
+        <meta name="author" content="Your name">
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>Vehicle Valuation System</title>
+        
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/fontawesome-all.min.css' %}'" rel="stylesheet">
+        <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <link href="{% static 'css/box.css' %}" rel="stylesheet">
+        
+        
+        <!-- Favicon  -->
+        <link rel="icon" href="{% static 'images/favicon.png' %}">
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#navbarExample">
+        <!-- Navigation -->
+        
+        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+            <div class="container">
+
+                <!-- Image Logo -->
+            <img src="{% static 'images/up-arrow.png' %}" alt="alternative">
+                <a class="navbar-brand logo-image" href="index.html"><img src="{% static 'images/logo.png' %}" alt="alternative"></a> 
+
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <!-- <a class="navbar-brand logo-text" href="index.html">Zigo</a> -->
+
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:homepage'%}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:services'%}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:aboutus'%}">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Vehicle Reviews</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="article.html">Best vehicle</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="terms.html">Electric vehicle</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:FAQ'%}">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+          {% if not user.is_authenticated %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:login'%}">Login</a>
+                        </li>
+                        {% endif %}
+
+                        {% if  user.is_authenticated %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:logout'%}">Logout</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    <span class="nav-item social-icons">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </span>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+        
+        <!-- Header -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5">
+                        <div class="text-container">
+                            <h1 class="h1-large">Vehicle Valuation System</h1>
+                            <p class="p-large"> Get a valuation in seconds - it could be worth more than you think!</p>
+                            <a class="btn-solid-lg" href="{%url 'Vehicle:valuation_form'%}">Discover</a>
+                            {% if not user.is_authenticated %}
+                            <a class="btn-outline-lg"  href="{%url 'useraccount:signup'%}">Register</a>
+                            {% endif %}
+
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of div -->
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="image-container">
+                            <img class="img-fluid" src="{% static 'images/front.jpg' %}" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <!-- Image Slider -->
+                        <div class="slider-container">
+                            <div class="swiper-container image-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="{% static 'images/kia.jpg' %}" alt="alternative">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="{% static 'images/toyota.jpg' %}" alt="alternative">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="{% static 'images/nissan.jpg' %}" alt="alternative">
+                                    </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-fluid" src="{% static 'images/download.jfif' %}" alt="alternative">
+                                        
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="{% static 'images/ford.jpg' %}" alt="alternative">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-fluid" src="{% static 'images/Honda.jpg' %}" alt="alternative">
+                                    </div>
+                                   
+                                </div> <!-- end of swiper-wrapper -->
+                            </div> <!-- end of swiper container -->
+                        </div> <!-- end of slider-container -->
+                        <!-- end of image slider -->
+    
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </header> <!-- end of header -->
+        <svg class="frame-decoration" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 150"><defs><style>.cls-1{fill:#f4f9ff;}</style></defs><title>frame-decoration</title><path class="cls-1" d="M0,81.411c143,57.608,255.5,64.833,328.644,61.616,147.721-6.5,183.881-57.563,320.829-51.347,143,6.491,167.826,65.1,293,58.193,109.095-6.018,115.68-51.946,225.251-54.77,113.58-2.928,138.8,45.589,251.189,39.936,104.012-5.231,109.713-48.158,197.369-44.5,89.549,3.736,124.375,50.226,227.622,47.924a353.34,353.34,0,0,0,76.1-10.269V0.5H0V81.411Z" transform="translate(0 -0.5)"/></svg>
+        <!-- end of header -->
+
+
+        <!-- Services -->
+        <div id="services" class="cards-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="h2-heading">Why value your car with us?</h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="card-image" src="{% static 'images/4.jpg' %}" alt="alternative">
+                                
+                            </div>
+                            <div class="card-body">
+                                
+                                <h5 class="card-title">FAST, EASY VALUATIONS YOU CAN ACTUALLY TRUST</h5>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="card-image" src="{% static 'images/1.jpg' %}" alt="alternative">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">POWERED BY DATA FROM MILLIONS OF VEHICLES</h5>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="card-image" src="{% static 'images/3.jpg' %}" alt="alternative">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">COMPLETELY FREE AND PROVIDED IN SECONDS</h5>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-1 -->
+        <!-- end of services -->
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>FAQs</title>
+          <style>
+            .question {
+              font-weight: bold;
+              cursor: pointer;
+            }
+        
+            .answer {
+              display: none;
+            }
+          </style>
+          <script>
+            // Function to toggle the visibility of the answer
+            function toggleAnswer(id) {
+              var answer = document.getElementById(id);
+              answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
+            }
+          </script>
+        </head>
+        </html>
+        
+        
+
+        {% comment %} <ul id="modification">
+            <li>
+                <label for="first">What is Modification? <span>&#x3e;</span></label>
+                    <input type="radio" name="modification" id="first" checked>
+                    <div class="content">
+                        <p> lalallalalalalallala lalal lala lal
+                            lalal l lalallalalalalallala
+                        </div>
+                    </li>
+                    <li>
+                        <label for="second">Desireable colour <span>&#x3e;</span></label>
+                            <input type="radio" name="modification" id="second" checked>
+                            <div class="content">
+                                <p> lalallalalalalallala lalal lala lal
+                                    lalal l lalallalalalalallala
+                                </div>
+                            </li>
+                            <li>
+                                <label for="third">No damage <span>&#x3e;</span></label>
+                                    <input type="radio" name="modification" id="third" checked>
+                                    <div class="content">
+                                        <p> lalallalalalalallala lalal lala lal
+                                            lalal l lalallalalalalallala
+                                        </div>
+                                    </li>
+                </ul> {% endcomment %}
+
+    
+
+    
+
+        
+        <!-- Details Modal -->
+        <div class="details-modal">
+            <div id="detailsModal1" class="modal fade" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="row">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="col-lg-8">
+                                <div class="image-container">
+                                    <img class="img-fluid" src="{% static 'images/details-modal.jpg' %}" alt="alternative">
+                                </div> <!-- end of image-container -->
+                            </div> <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Goals Setting</h3>
+                                <hr>
+                                <p>In gravida at nunc sodales pretium. Vivamus semper, odio vitae mattis auctor, elit elit semper magna ac tum nico vela spider</p>
+                                <h4>User Feedback</h4>
+                                <p>Sapien vitae eros. Praesent ut erat a tellus posuere nisi more thico cursus pharetra finibus posuere nisi. Vivamus feugiat</p>
+                                <ul class="list-unstyled li-space-lg">
+                                    <li class="d-flex">
+                                        <i class="fas fa-check"></i>
+                                        <div class="flex-grow-1">Tincidunt sem vel brita bet mala</div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check"></i>
+                                        <div class="flex-grow-1">Sapien condimentum sacoz sil necr</div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check"></i>
+                                        <div class="flex-grow-1">Fusce interdum nec ravon fro urna</div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check"></i>
+                                        <div class="flex-grow-1">Integer pulvinar biolot bat tortor</div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check"></i>
+                                        <div class="flex-grow-1">Id ultricies fringilla fangor raq trinit</div>
+                                    </li>
+                                </ul>
+                                <a id="modalCtaBtn" class="btn-solid-reg" href="#your-link">Details</a>
+                                <button type="button" class="btn-outline-reg" data-bs-dismiss="modal">Close</button>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of modal-content -->
+                </div> <!-- end of modal-dialog -->
+            </div> <!-- end of modal -->
+        </div> <!-- end of details-modal -->
+        <!-- end of details modal -->
+            
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- end of add arrows -->
+            
+                            </div> <!-- end of swiper-container -->
+                        </div> <!-- end of slider-container -->
+                        <!-- end of card slider -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of slider -->
+        <!-- end of projects -->
+
+
+
+        <!-- Contact -->
+        <div id="contact" class="basic-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1241.5303553091994!2d-0.14076024298621118!3d51.51210217963597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d502268421%3A0x6a7d62889992f993!2sRegent+St%2C+Soho%2C+London+W1B+5TH%2C+UK!5e0!3m2!1sen!2sro!4v1476174541049" allowfullscreen></iframe>
+                        </div>
+                    </div> <!-- end of col -->
+                    <div class="col-lg-5">
+                        <div class="text-container">
+                            <h2>Contact Details</h2>
+                            <p>Customer Support Email: support@examplevehiclevaluation.com</p>
+                            <p>Customer Support Phone: 01-5572846</p>
+                            <div class="divider"></div>
+                            <h4>Mailing Address</h4>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="d-flex">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="flex-grow-1">
+                                        1234 Main Street,
+                                        City, State, ZIP Code,
+                                        Country</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div class="flex-grow-1"></div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="flex-grow-1"><a class="light-gray" href="mailto:contact@domain.com"></a> <i class="fas fa-globe"></i><a class="light-gray" href="#your-link"></a></div>
+                                </li>
+                            </ul>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-3 -->
+        <!-- end of contact -->
+
+
+        <!-- Footer -->
+    <div class="footer bg-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-col first">
+                <h6>About Website</h6>
+                <p class="p-small">
+                  With our extensive expertise in the automotive industry and access to comprehensive market 
+                                  data, we aim to provide accurate and up-to-date valuations for a wide range of vehicles. Whether you're buying,
+                                   selling, or simply curious about the value of your vehicle, our system is here to assist you.
+                </p>
+              </div>
+              <!-- end of footer-col -->
+              <div class="footer-col second">
+                <h6>Links</h6>
+                <ul class="list-unstyled li-space-lg p-small">
+                  <li>
+                    Important: <a href="terms.html">Terms & Conditions</a>,
+                    <a href="privacy.html">Privacy Policy</a>
+                  </li>
+                  <li>
+                    Useful: <a href="#">Colorpicker</a>,
+                    <a href="#">Icon Library</a>, <a href="#">Illustrations</a>
+                  </li>
+                  <li>
+                    Menu: <a href="index.html">Home</a>,
+                    <a href="#services">Services</a>,
+                    <a href="#solutions">Solutions</a>,
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end of footer-col -->
+              <div class="footer-col third">
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x"></i>
+                  </a>
+                </span>
+                <p class="p-small">
+                  Feel free to reach out to us via email or phone with any inquiries, feedback, or support you may need.
+                   Our team is ready to assist you and provide any necessary information related to our Vehicle Valuation 
+                   Project.
+                  
+                </p>
+              </div>
+              <!-- end of footer-col -->
+            </div>
+            <!-- end of col -->
+          </div>
+          <!-- end of row -->
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of footer -->
+      <!-- end of footer -->
+
+
+        <!-- Copyright -->
+        <div class="copyright bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+                    </div> <!-- end of col -->
+                </div> <!-- enf of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of copyright --> 
+        <!-- end of copyright -->
+        
+
+        <!-- Back To Top Button -->
+        <button onclick="topFunction()" id="myBtn">
+            <img src="{% static 'images/up-arrow.png' %}" alt="alternative">
+        </button>
+        <!-- end of back to top button -->
+            
+        <!-- Scripts -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+        <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+        <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
+    </body>
+    </body>
+</html>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base1.html' %}
+{% block content %}
+  <h2>Vehicle Valuation</h2>
+  <form method="POST" action="{% url 'Predictionmodel:prediction' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+  {% if predictions %}
+    <h2>Predicted Values</h2>
+    <ul>
+      {% for prediction in predictions %}
+        <li>{{ prediction }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Your description">
+        <meta name="author" content="Your name">
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>Services</title>
+        
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        
+        <!-- Favicon  -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+    <body>
+        
+        <!-- Navigation -->
+        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+            <div class="container">
+
+                <!-- Image Logo -->
+                <a class="navbar-brand logo-image" href="index.html"><img src="{% static 'images/logo.png' %}" alt="alternative"></a> 
+
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <!-- <a class="navbar-brand logo-text" href="index.html">Zigo</a> -->
+
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:homepage'%}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:aboutus'%}">About Us</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Vehicle Reviews</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="article.html">Best Vehicle</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="terms.html">Electric Vehicle</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:FAQ'%}">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <span class="nav-item social-icons">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </span>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+
+        <!-- Header -->
+        <header class="ex-header bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <h1>FAQ</h1>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </header> <!-- end of ex-header -->
+        <!-- end of header -->
+
+
+        <!-- Basic -->
+        <div class="ex-basic-1 pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <h4 class="mt-5 mb-3">Q1: What is the Vehicle Valuation System?</h4>
+                        <p class="mb-5">The Vehicle Valuation System is a comprehensive system designed to
+                             estimate the value of vehicles. It utilizes various factors such as make, model, year,
+                             mileage, condition, and market trends to provide an approximate value for a specific vehicle.</h3>
+                       
+                             
+
+                        <h4>Q2: How does the Vehicle Valuation Project work?</h4>
+                        <p class="mb-5">The system employs a combination of data analysis, machine learning, and market
+                             research techniques to calculate the estimated value of a vehicle. It considers factors like 
+                             the vehicle's age, mileage,condition, location, and current market trends to generate a valuation.</p>
+                       
+                             <h4>Q3: What data sources are used for vehicle valuation?</h4>
+                        <p class="mb-5">The Vehicle Valuation System gathers data from multiple reliable sources, 
+                            including vehicle registration databases, marketplaces, dealerships, and historical sales records. 
+                            It also considers factors such as manufacturer specifications and optional features to provide a more accurate valuation</p>
+                              
+                              <h4>Q4: How accurate is the valuation provided by the Vehicle Valuation Project?</h4>
+                              <p class="mb-5">The valuation provided by the Vehicle Valuation Project is an estimation based on various
+                                factors and available data. While efforts are made to ensure accuracy, it's important to note that the valuation is an approximation and may not reflect the exact selling price. Real-world conditions, market fluctuations,
+                                 and other variables can impact the actual value of a vehicle.</p>
+
+                        
+                        <h4>Q5: Is the Vehicle Valuation Project applicable to all types of vehicles?</h4>
+                        <p>The Vehicle Valuation Project covers a wide range of vehicles, including cars, trucks, SUVs, motorcycles,
+                             and recreational vehicles. However, it may not provide accurate valuations for rare or exotic vehicles,as their value is often
+                             subjective and can vary significantly based on factors unique to those vehicles.</p>
+                       
+                        <h4>Q6: Can I use the Vehicle Valuation Project to determine the value of a modified vehicle?</h4>
+                        <p>The Vehicle Valuation Project takes into account various factors, including optional features and modifications, 
+                            to estimate the value of a vehicle. However, the valuation may not fully capture the subjective nature of
+                             modifications or aftermarket additions. For highly customized vehicles, it's recommended to consult with automotive experts
+                              or specialists for a more accurate appraisal.</p>
+
+                        <h4>Q7: Is the Vehicle Valuation Project available worldwide?</h4>
+                        <p>The Vehicle Valuation Project aims to provide valuations for vehicles in multiple regions worldwide.
+                             However, the availability and accuracy of data may vary by location. It's important to note that the
+                              project's coverage may be more comprehensive in certain countries or regions compared to others.</p>
+                        
+                        <h4>Q8: How often is the data in the Vehicle Valuation System updated?</h4>
+                        <p>The system strives to keep the data updated regularly to ensure accurate valuations. The frequency of
+                             updates may vary based on market conditions and data availability.</p>
+
+                        <h4>Q9: Is my personal information secure when using the Vehicle Valuation System? </h4>
+                        <p>Yes, reputable Vehicle Valuation Systems prioritize user data security. They employ various measures such as encryption, secure servers, 
+                            and data protection protocols to ensure the confidentiality and integrity of user information.</p>
+                            
+                        <h4>Q10: How often is the data in the Vehicle Valuation System updated?</h4>
+                        <p>If you have any questions, issues, or need further assistance, you can reach our customer support team through the contact information 
+                            provided on our website or mobile app. We'll be happy to help you.</p>
+
+                            
+
+
+                        
+
+
+
+                             <!-- end of text-box -->
+                        
+                       
+                        
+                       
+                        <a class="btn-solid-reg mb-5" href="{%url 'useraccount:homepage'%}">Home</a>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of ex-basic-1 -->
+        <!-- end of basic -->
+
+
+        <!-- Footer -->
+        <div class="footer bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-col first">
+                            <h6>About Website</h6>
+                            <p class="p-small">With our extensive expertise in the automotive industry and access to comprehensive market 
+                                data, we aim to provide accurate and up-to-date valuations for a wide range of vehicles. Whether you're buying,
+                                 selling, or simply curious about the value of your vehicle, our system is here to assist you.</p>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col second">
+                            <h6>Links</h6>
+                            <ul class="list-unstyled li-space-lg p-small">
+                                <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
+                                <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
+                                <li>Menu: <a href="index.html">Home</a>, <a href="#services">Services</a>, <a href="#solutions">Solutions</a>, <a href="#contact">Contact</a></li>
+                            </ul>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col third">
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <p class="p-small">Feel free to reach out to us via email or phone with any inquiries, feedback, or support you may need.
+                                Our team is ready to assist you and provide any necessary information related to our Vehicle Valuation 
+                                Project. </p>
+                        </div> <!-- end of footer-col -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->  
+        <!-- end of footer -->
+
+
+        <!-- Copyright -->
+        <div class="copyright bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+                    </div> <!-- end of col -->
+                </div> <!-- enf of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of copyright --> 
+        <!-- end of copyright -->
+        
+
+        <!-- Back To Top Button -->
+        <button onclick="topFunction()" id="myBtn">
+            <img src="{% static 'images/up-arrow.png' %}" alt="alternative">
+        </button>
+        <!-- end of back to top button -->
+            
+        <!-- Scripts -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+        <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+        <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
+    </body>
+</html>

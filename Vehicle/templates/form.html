@@ -1,0 +1,170 @@
+{% comment %} {%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valuation Form</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center">Valuation Form</h1>
+      <form>
+        
+         
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="vehicle-brand">Vehicle brand:</label>
+            <select id="vehicle-brand" class="custom-select">
+              <option value="">Select a brand</option>
+              <option value="audi">Audi</option>
+              <option value="bmw">BMW</option>
+              <option value="chevrolet">Chevrolet</option>
+              <option value="ford">Ford</option>
+              <option value="honda">Honda</option>
+              <option value="toyota">Toyota</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="vehicle-model">Vehicle model:</label>
+            <select id="vehicle-model" disabled class="custom-select">
+              <option value="">Select a model</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          
+          <div class="form-group col-md-6">
+            <label for="vehicle-year">Distance Travelled:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="vehicle-year"
+              placeholder="Enter your vehicle's disance travel"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="fuel-type">Fuel type:</label>
+            <select class="form-control" id="condition">
+              <option selected disabled>Choose...</option>
+              <option>Petrol</option>
+              <option>Diesel</option>
+              <option>EV</option>
+            </select>
+        </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="v-id">Mileage:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="v-id"
+              placeholder="Enter your vehicle's mileage"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="mileage">Vehicle Year:</label>
+            <select class="form-control" id="Year">
+              <option selected disabled>Choose..</option>
+              <option>1990</option>
+              <option>1991</option>
+              <option>1992</option>
+              <option>1993</option>
+              <option>1994</option>
+              <option>1995</option>
+              <option>1996</option>
+              <option>1997</option>
+              <option>1998</option>
+              <option>1999</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+              <option>2003</option>
+              <option>2004</option>
+              <option>2005</option>
+              <option>2006</option>
+              <option>2007</option>
+              <option>2008</option>
+              <option>2009</option>
+              <option>2010</option>
+              <option>2012</option>
+              <option>2013</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2016</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2021</option>
+              
+
+
+
+
+            </select>
+          </div>
+        </div>
+        
+        
+      
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <script>
+        // Get the dropdown elements
+        const vehicleBrandDropdown = document.getElementById('vehicle-brand');
+        const vehicleModelDropdown = document.getElementById('vehicle-model');
+
+        // Define the vehicle models for each brand
+        const vehicleModels = {
+            audi: ['A1', 'A3', 'A4', 'A5', 'A6', 'Q2', 'Q3', 'Q5', 'Q7', 'Q8', 'R8', 'TT'],
+            bmw: ['1 Series', '2 Series', '3 Series', '4 Series', '5 Series', '6 Series', '7 Series', '8 Series', 'X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'Z4'],
+            chevrolet: ['Camaro', 'Corvette', 'Impala', 'Malibu', 'Silverado', 'Suburban', 'Tahoe', 'Trailblazer'],
+            ford: ['Bronco', 'Escape', 'Explorer', 'F-150', 'Focus', 'Fusion', 'Mustang', 'Ranger'],
+            honda: ['Accord', 'Civic', 'CR-V', 'HR-V', 'Odyssey', 'Passport', 'Pilot', 'Ridgeline'],
+            toyota: ['4Runner', 'Camry', 'Corolla', 'Highlander', 'Land Cruiser', 'RAV4', 'Sienna', 'Tacoma', 'Tundra']
+        };
+
+        // Function to populate the vehicle model dropdown based on the selected brand
+        function populateVehicleModelDropdown(brand) {
+            // Clear the previous options in the vehicle model dropdown
+            vehicleModelDropdown.innerHTML = '<option value="">Select a model</option>';
+
+            // If a brand is selected, populate the vehicle model dropdown with the models of that brand
+            if (brand) {
+                const models = vehicleModels[brand];
+                models.forEach(model => {
+                    const option = document.createElement('option');
+                    option.value = model;
+                    option.text = model;
+                    vehicleModelDropdown.add(option);
+                });
+                // Enable the vehicle model dropdown
+                vehicleModelDropdown.disabled = false;
+            } else {
+                // If no brand is selected, disable the vehicle model dropdown
+                vehicleModelDropdown.disabled = true;
+            }
+        }
+
+        // Event listener for when the vehicle brand is changed
+        vehicleBrandDropdown.addEventListener('change', function () {
+            // Get the selected brand
+            const brand = vehicleBrandDropdown.value;
+            // Populate the vehicle model dropdown based on the selected brand
+            populateVehicleModelDropdown(brand);
+        });
+
+    </script>
+  </body>
+</html> {% endcomment %}

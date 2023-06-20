@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Valuation Prediction Form</title>
+</head>
+<body>
+    <h1>Vehicle Valuation Prediction Form</h1>
+
+    <form method="post" action="/prediction/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Your description">
+        <meta name="author" content="Your name">
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>Services</title>
+        
+        <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        
+        <!-- Favicon  -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+    <body>
+        
+        <!-- Navigation -->
+        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+            <div class="container">
+
+                <!-- Image Logo -->
+                <a class="navbar-brand logo-image" href="index.html"><img src="{% static 'images/logo.png' %}" alt="alternative"></a> 
+
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <!-- <a class="navbar-brand logo-text" href="index.html">Zigo</a> -->
+
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:homepage'%}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:services'%}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:aboutus'%}">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Vehicle Reviews</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="article.html">Best Vehicle</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="terms.html">Electric Vehicle</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url 'useraccount:FAQ'%}">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <span class="nav-item social-icons">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </span>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+
+        <!-- Header -->
+        <header class="ex-header bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <h1>Services</h1>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </header> <!-- end of ex-header -->
+        <!-- end of header -->
+
+
+        <!-- Basic -->
+        <div class="ex-basic-1 pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <h2 class="mt-5 mb-3">1. Private data we receive and collect</h2>
+                        <p class="mb-5">Vehicle valuation services provide an essential tool for determining the worth of a vehicle in the market. These services utilize various data sources and analytical techniques to provide accurate and reliable valuations. Whether you're looking to buy or sell a vehicle, insurance purposes, or simply curious about its value, vehicle valuation projects offer valuable insights. Here are some key aspects and features of these services:</h3>
+                        <p class="mb-5"></p>
+                        <h3>Data Collection </h3>
+                        <p class="mb-5">Vehicle valuation projects gather a vast amount of data from multiple sources to 
+                            ensure a comprehensive assessment. They collect information on factors such as make, model, 
+                            year of manufacture, mileage, condition, optional features, previous ownership, accident history,
+                             market trends, and more. This data is essential for generating an accurate valuation.</p>
+                        <h3>Vehicle Condition Assessment </h3>
+                        <p class="mb-5">The condition of a vehicle plays a crucial role in determining its value.
+                             Vehicle valuation services may employ experienced professionals or utilize advanced 
+                             technology to assess the condition of a vehicle accurately. They consider factors such as
+                              mechanical condition, cosmetic appearance, interior wear, and any modifications or upgrades made to the vehicle.</p>
+                              <h3>Valuation Reports</h3>
+                              <p class="mb-5"> Once the data analysis and assessment are complete, vehicle valuation
+                                 services generate detailed reports outlining the estimated value of the vehicle.
+                                  These reports typically include the vehicle's fair market value, trade-in value,
+                                   private sale value, and other relevant information. The reports can be used as a 
+                                   reference for negotiating prices, determining insurance coverage, or making informed 
+                                   decisions about buying or selling a vehicle.</p>
+
+                        <h2 class="mb-3">2. Advantages of working with service</h2>
+                        <h3>Accurate and Reliable Valuations</h3>
+                        <p>Vehicle valuation services specialize in collecting and analyzing vast amounts of data to provide accurate
+                             and reliable valuations. Their expertise and sophisticated algorithms ensure that the valuations are based
+                              on up-to-date market trends, historical data, and comprehensive analysis. This accuracy helps individuals
+                               make informed decisions when buying, selling, or insuring a vehicle.</p>
+                        <p class="mb-4"></p>
+                        <h3>Time and Cost Savings</h3>
+                        <p>Determining the value of a vehicle can be a time-consuming and complex process. By working with a 
+                            valuation service, individuals can save significant time and effort. Instead of manually researching 
+                            and analyzing market trends, a valuation service can provide quick and reliable valuations with just 
+                            a few clicks. This convenience translates into cost savings, as individuals can avoid the expenses
+                             associated with hiring appraisers or spending excessive time on market research.</p>
+                        <h3>Data-driven Decision Making</h3>
+                        <p>Vehicle valuation services rely on a wealth of data from various sources to generate valuations.
+                             This data-driven approach ensures that the valuations are objective and based on factual information.
+                              By utilizing these valuations, individuals can make informed decisions when buying or selling a vehicle.
+                               They can negotiate prices confidently, understand the market dynamics, and avoid overpaying or underselling.</p>
+
+
+                        
+
+
+
+                             <!-- end of text-box -->
+                        
+                        <h2 class="mb-3">3. Better understand your needs</h2>
+                        <p class="mb-5"> Understanding the needs of your customers or clients is a crucial aspect of 
+                            providing effective services in any industry, including vehicle valuation. By understanding their needs,
+                             you can tailor your services to meet their specific requirements and provide a more satisfactory experience</p>
+                        <h3>Customer Surveys and Feedback</h3>
+                        <p class="mb-5">Implement customer surveys and feedback mechanisms to gather direct input from your clients. These surveys can include questions related to the specific aspects of vehicle valuation that are important to them, such as accuracy, timeliness, user experience, or additional features they may find valuable. Analyze the responses to identify patterns, common concerns, and areas for improvement.</p>
+                        <h3>Research and Analysis</h3>
+                        <p class="mb-5">Conduct thorough research to understand the market and industry trends. Stay updated with the latest developments, technological advancements, and customer preferences related to vehicle valuation. Analyze the demographic and psychographic characteristics of your target audience to gain insights into their specific needs, preferences, and pain points.</p>
+                        <div class="text-box mb-5">
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Informing Buying and Selling Decisionsu</strong>Vehicle valuation helps individuals and businesses make informed decisions when buying or selling vehicles. By providing an accurate assessment of a vehicle's value, valuation allows buyers to negotiate fair prices and sellers to set appropriate asking prices. It ensures transparency and fairness in the transaction process.</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>TFacilitating Loan and Financing Processes</strong>Lenders and financial institutions often require vehicle valuation as part of the loan and financing processes. Valuation helps them assess the collateral's value and determine the loan amount or financing terms. It minimizes risks for lenders and enables borrowers to access appropriate funding based on the vehicle's value.</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Providing Financial and Accounting Assessments</strong>Vehicle valuation is important for financial and accounting purposes. It helps businesses assess the value of their vehicle assets for financial reporting, asset management, tax calculations, and depreciation schedules. Accurate valuation ensures that the financial statements reflect the true value of the vehicles and comply with accounting standards.</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Providing Market Insights and Trends</strong> Vehicle valuation projects and services collect extensive data on vehicle sales, market trends, and industry dynamics. This data provides valuable insights into market trends, demand patterns, depreciation rates, and the performance of specific makes and models. It helps individuals, businesses, and industry professionals stay informed about the automotive market and make strategic decisions.</div>
+                                </li>
+                               
+                            </ul>
+                        </div> <!-- end of text-box -->
+                        
+                        
+                       
+                        <a class="btn-solid-reg mb-5" href="{%url 'useraccount:homepage'%}">Home</a>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of ex-basic-1 -->
+        <!-- end of basic -->
+
+
+        <!-- Footer -->
+        <div class="footer bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-col first">
+                            <h6>About Website</h6>
+                            <p class="p-small">With our extensive expertise in the automotive industry and access to comprehensive market 
+                                data, we aim to provide accurate and up-to-date valuations for a wide range of vehicles. Whether you're buying,
+                                 selling, or simply curious about the value of your vehicle, our system is here to assist you.</p>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col second">
+                            <h6>Links</h6>
+                            <ul class="list-unstyled li-space-lg p-small">
+                                <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
+                                <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
+                                <li>Menu: <a href="index.html">Home</a>, <a href="#services">Services</a>, <a href="#solutions">Solutions</a>, <a href="#contact">Contact</a></li>
+                            </ul>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col third">
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <p class="p-small">Feel free to reach out to us via email or phone with any inquiries, feedback, or support you may need.
+                                Our team is ready to assist you and provide any necessary information related to our Vehicle Valuation 
+                                Project. </p>
+                        </div> <!-- end of footer-col -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->  
+        <!-- end of footer -->
+
+
+        <!-- Copyright -->
+        <div class="copyright bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+                    </div> <!-- end of col -->
+                </div> <!-- enf of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of copyright --> 
+        <!-- end of copyright -->
+        
+
+        <!-- Back To Top Button -->
+        <button onclick="topFunction()" id="myBtn">
+            <img src="{% static 'images/up-arrow.png' %}" alt="alternative">
+        </button>
+        <!-- end of back to top button -->
+            
+        <!-- Scripts -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+        <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+        <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
+    </body>
+</html>
